@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000046;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1CB5E0, #000046);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1CB5E0, #000046);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.contenedor{
+    display: flex;
+    max-width: 70%;
+}
+
+.bloque1 {
+    width: 100%;
+    max-width: 400px;
+    height: 600px;
+    display: flex;
+}
+
+.bloque2 {
+    width: 80%;
+    max-width: 400px;
+    margin: auto;
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    background: #00F260;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0575E6, #00F260);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0575E6, #00F260);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 10px 10px 10px black;
+}
+
+.inpu_100 {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+    padding: 20px;
+    border: none;
+}
+
+.btn_boton {
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+    background: #8E2DE2;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btn_boton:active {
+    transform: scale(1.05);
+}
+
+.btn_boton:hover {
+    background: #4A00E0;
+}
+
+.tabla{
+    float: right;
+}
+
+@media (max-width:768px){
+    .contenedor{
+        display: block;
+        max-width: 100%;
+    }
+
+}
