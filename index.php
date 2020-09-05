@@ -1,4 +1,4 @@
-<?php include 'php/conn.php'; ?>
+<?php include 'php/conn.php';?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,16 +28,18 @@
     <!--SECCION DE GUARDAR LA TAREA FORMULARIO-->
     <section class="contenedor">
         <div class="bloque1">
+        <!--VERSION-->
+        <i>Beta 0.01</i>
             <form action="php/save_task.php" method="POST" class="bloque2">
                 <!--ALERTA-->
-                <?php if (isset($_SESSION['message'])) { ?>
-                <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert">
-                    <?= $_SESSION['message'] ?>
+                <?php if (isset($_SESSION['message'])) {?>
+                <div class="alert alert-<?=$_SESSION['message_type']?> alert-dismissible fade show" role="alert">
+                    <?=$_SESSION['message']?>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <?php session_unset(); }?>
+                <?php session_unset();}?>
                 <input required name="asignatura" class="inpu_100 form-control" type="text" placeholder="Asignatura"
                     autofocus>
                 <input required name="nombre_de_tarea" class="inpu_100 form-control" type="text"
@@ -60,10 +62,10 @@
                 </tr>
             </thead>
             <?php
-        $seleccionar = "SELECT * FROM tareas";
-        $resultado = mysqli_query($conn, $seleccionar);
+$seleccionar = "SELECT * FROM tareas";
+$resultado = mysqli_query($conn, $seleccionar);
 
-        while ($mostrar = mysqli_fetch_array($resultado)) { ?>
+while ($mostrar = mysqli_fetch_array($resultado)) {?>
             <tbody>
                 <tr>
                     <td class="bg-primary"><?php echo $mostrar['id'] ?></td>
@@ -72,7 +74,7 @@
                     <td><?php echo $mostrar['descripcion'] ?></td>
                     <td><?php echo $mostrar['fecha'] ?></td>
                     <td>
-                        <a href="php/borrar.php?id=<?php echo $mostrar['id']?>">🗑</a>
+                        <a href="php/borrar.php?id=<?php echo $mostrar['id'] ?>">🗑</a>
                         <a href=""></a>
                     </td>
                 </tr>
@@ -80,7 +82,7 @@
 
             </tbody>
             <?php }?>
-            
+
         </table>
     </section>
 </body>
