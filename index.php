@@ -28,9 +28,9 @@
     <!--SECCION DE GUARDAR LA TAREA FORMULARIO-->
     <section class="contenedor">
         <div class="bloque1">
-        <!--VERSION-->
-        <i>Beta 0.01</i>
             <form action="php/save_task.php" method="POST" class="bloque2">
+                    <!--VERSION-->
+        <i>Beta 0.01</i>
                 <!--ALERTA-->
                 <?php if (isset($_SESSION['message'])) {?>
                 <div class="alert alert-<?=$_SESSION['message_type']?> alert-dismissible fade show" role="alert">
